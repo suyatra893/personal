@@ -1,0 +1,25 @@
+n = int(input("Enter the number of elements in the list: "))
+numbers = []
+
+print("Enter the numbers:")
+for _ in range(n):
+    numbers.append(int(input()))
+
+
+largest = second_largest = float('-inf')
+
+
+for num in numbers:
+    if num > largest:
+      
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+       
+        second_largest = num
+
+
+if second_largest == float('-inf'):
+    print("There is no second largest number in the list.")
+else:
+    print("The second largest number is:", second_largest)
